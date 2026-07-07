@@ -17,34 +17,37 @@ import ProtectedRoute from "./components/common/ProtectedRoute";
 
 export default function App() {
   return (
-    <AnimatePresence mode="wait">
-      <Routes>
-        {/* Public routes */}
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
+    <>
+      <div className="grain-overlay" />
+      <AnimatePresence mode="wait">
+        <Routes>
+          {/* Public routes */}
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
 
-        {/* Protected dashboard routes — nested under DashboardLayout */}
-        <Route
-          path="/dashboard"
-          element={
-            <ProtectedRoute>
-              <DashboardLayout />
-            </ProtectedRoute>
-          }
-        >
-          <Route index element={<DashboardHome />} />
-          <Route path="portfolio-analyzer" element={<PortfolioAnalyzerPage />} />
-          <Route path="valuation-calculator" element={<ValuationCalculatorPage />} />
-          <Route path="historical-tracker" element={<HistoricalTrackerPage />} />
-          <Route path="news-sentiment" element={<NewsSentimentPage />} />
-          <Route path="risk-analyzer" element={<RiskAnalyzerPage />} />
-          <Route path="settings" element={<SettingsPage />} />
-        </Route>
+          {/* Protected dashboard routes — nested under DashboardLayout */}
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <DashboardLayout />
+              </ProtectedRoute>
+            }
+          >
+            <Route index element={<DashboardHome />} />
+            <Route path="portfolio-analyzer" element={<PortfolioAnalyzerPage />} />
+            <Route path="valuation-calculator" element={<ValuationCalculatorPage />} />
+            <Route path="historical-tracker" element={<HistoricalTrackerPage />} />
+            <Route path="news-sentiment" element={<NewsSentimentPage />} />
+            <Route path="risk-analyzer" element={<RiskAnalyzerPage />} />
+            <Route path="settings" element={<SettingsPage />} />
+          </Route>
 
-        {/* Fallback */}
-        <Route path="*" element={<LandingPage />} />
-      </Routes>
-    </AnimatePresence>
+          {/* Fallback */}
+          <Route path="*" element={<LandingPage />} />
+        </Routes>
+      </AnimatePresence>
+    </>
   );
 }

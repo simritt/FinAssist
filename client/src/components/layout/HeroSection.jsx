@@ -13,15 +13,9 @@ const floatingCards = [
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden pt-40 pb-32 px-6">
-      {/* Animated gradient background */}
+      {/* Static, restrained background — no animated rainbow gradient */}
       <div className="absolute inset-0 -z-10">
-        <div
-          className="absolute inset-0 bg-[length:200%_200%] animate-gradient-shift opacity-60 dark:opacity-40"
-          style={{
-            backgroundImage:
-              "linear-gradient(120deg, #eef4ff 0%, #dce8ff 30%, #f8fafc 60%, #eef2ff 100%)",
-          }}
-        />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-50/60 via-white to-white dark:from-primary-950/30 dark:via-surface-dark dark:to-surface-dark" />
         <div className="absolute inset-0 bg-grid-pattern [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]" />
       </div>
 
@@ -32,7 +26,7 @@ export default function HeroSection() {
           transition={{ duration: 0.5 }}
           className="inline-flex items-center gap-2 rounded-full border border-primary-200 dark:border-primary-500/30 bg-white/60 dark:bg-white/5 px-4 py-1.5 text-xs font-semibold text-primary-700 dark:text-primary-300 backdrop-blur-sm mb-8"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
           Trusted by 12,000+ investors
         </motion.div>
 
@@ -40,10 +34,10 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.1]"
+          className="font-display text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1]"
         >
           Smarter Investment<br />
-          <span className="bg-gradient-to-r from-primary-500 via-indigo-500 to-primary-600 bg-clip-text text-transparent">
+          <span className="text-primary-600 dark:text-primary-400">
             Decisions Start Here.
           </span>
         </motion.h1>
@@ -93,7 +87,7 @@ export default function HeroSection() {
                 <card.icon size={18} />
               </div>
               <div>
-                <p className="text-sm font-bold text-slate-800 dark:text-white">{card.label}</p>
+                <p className="font-display text-sm font-semibold text-slate-800 dark:text-white">{card.label}</p>
                 <p className="text-xs text-slate-500 dark:text-slate-400">{card.sub}</p>
               </div>
             </div>

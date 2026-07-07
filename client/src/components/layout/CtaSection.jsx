@@ -11,11 +11,11 @@ export default function CtaSection() {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="mx-auto max-w-5xl rounded-3xl bg-gradient-to-br from-primary-600 via-primary-500 to-indigo-600 px-8 py-16 md:px-16 md:py-20 text-center relative overflow-hidden"
+        className="mx-auto max-w-5xl rounded-3xl bg-primary-600 px-8 py-16 md:px-16 md:py-20 text-center relative overflow-hidden"
       >
         <div className="absolute inset-0 bg-grid-pattern opacity-20" />
         <div className="relative">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-5">
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-white mb-5">
             Start investing smarter today.
           </h2>
           <p className="text-primary-100 text-lg max-w-xl mx-auto mb-10">

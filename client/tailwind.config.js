@@ -11,7 +11,7 @@ export default {
           200: "#b8d1ff",
           300: "#8ab1ff",
           400: "#5a8bff",
-          500: "#3366ff", // core brand blue
+          500: "#3366ff", // core brand blue — the ONLY brand hue
           600: "#254edb",
           700: "#1c3cad",
           800: "#1a3389",
@@ -19,29 +19,27 @@ export default {
           950: "#111c42",
         },
         accent: {
-          indigo: "#6366f1",
-          emerald: "#10b981",
-          rose: "#f43f5e",
-          amber: "#f59e0b",
+          amber: "#f59e0b", // reserved for warnings/risk only
+          emerald: "#10b981", // reserved for positive/gains only
+          rose: "#f43f5e", // reserved for negative/losses only
         },
         surface: {
           light: "#ffffff",
           subtle: "#f8fafc",
-          dark: "#0b1120",
-          darkCard: "#111827",
-          darkElevated: "#1a2234",
+          dark: "#0a0e17",
+          darkCard: "#10141f",
+          darkElevated: "#171c2a",
         },
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["Cal Sans", "Inter", "sans-serif"],
+        display: ["Space Grotesk", "Inter", "sans-serif"], // headings & numbers only
       },
       animation: {
         "ticker-scroll": "ticker-scroll 40s linear infinite",
         float: "float 6s ease-in-out infinite",
         "float-delayed": "float 6s ease-in-out infinite 2s",
         "fade-in-up": "fade-in-up 0.6s ease-out forwards",
-        "gradient-shift": "gradient-shift 8s ease infinite",
         shimmer: "shimmer 2s linear infinite",
       },
       keyframes: {
@@ -57,19 +55,15 @@ export default {
           "0%": { opacity: "0", transform: "translateY(24px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        "gradient-shift": {
-          "0%, 100%": { backgroundPosition: "0% 50%" },
-          "50%": { backgroundPosition: "100% 50%" },
-        },
         shimmer: {
           "0%": { backgroundPosition: "-1000px 0" },
           "100%": { backgroundPosition: "1000px 0" },
         },
       },
       boxShadow: {
-        glow: "0 0 40px -10px rgba(51, 102, 255, 0.5)",
-        card: "0 2px 20px -4px rgba(0,0,0,0.08)",
-        "card-dark": "0 2px 20px -4px rgba(0,0,0,0.4)",
+        glow: "0 0 40px -10px rgba(51, 102, 255, 0.45)",
+        card: "0 1px 3px rgba(0,0,0,0.04), 0 8px 24px -8px rgba(15,23,42,0.06)",
+        "card-dark": "0 1px 3px rgba(0,0,0,0.3), 0 8px 24px -8px rgba(0,0,0,0.4)",
       },
       backgroundImage: {
         "grid-pattern":

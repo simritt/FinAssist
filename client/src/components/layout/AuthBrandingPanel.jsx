@@ -10,11 +10,8 @@ const floatIcons = [
 
 export default function AuthBrandingPanel({ title, subtitle }) {
   return (
-    <div className="relative hidden lg:flex flex-col justify-between w-1/2 min-h-screen bg-gradient-to-br from-primary-700 via-primary-600 to-indigo-700 p-12 overflow-hidden">
+    <div className="relative hidden lg:flex flex-col justify-between w-1/2 min-h-screen bg-primary-700 p-12 overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-20" />
-      <div className="absolute inset-0 bg-[length:200%_200%] animate-gradient-shift opacity-30"
-        style={{ backgroundImage: "radial-gradient(circle at 30% 30%, rgba(255,255,255,0.15), transparent 60%)" }}
-      />
 
       {floatIcons.map((f, i) => (
         <motion.div
@@ -39,7 +36,7 @@ export default function AuthBrandingPanel({ title, subtitle }) {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="relative z-10"
       >
-        <h2 className="text-4xl font-extrabold text-white leading-tight mb-4">{title}</h2>
+        <h2 className="font-display text-4xl font-bold text-white leading-tight mb-4">{title}</h2>
         <p className="text-primary-100 text-lg max-w-md">{subtitle}</p>
       </motion.div>
 

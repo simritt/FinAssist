@@ -1,4 +1,4 @@
-import { Wallet, TrendingUp, TrendingDown, PiggyBank, Banknote, ShieldAlert, Landmark } from "lucide-react";
+import { Wallet, TrendingUp, TrendingDown, ShieldAlert } from "lucide-react";
 import StatCard from "../components/dashboard/StatCard";
 import AllocationChart from "../components/dashboard/AllocationChart";
 import PerformanceChart from "../components/dashboard/PerformanceChart";
@@ -13,7 +13,7 @@ import { summaryStats } from "../data/dashboardData";
 export default function DashboardHome() {
   return (
     <div className="space-y-6 max-w-[1600px] mx-auto">
-      {/* Top stat cards */}
+      {/* Top stat cards — icons kept only where they clarify meaning (profit/loss/risk), dropped elsewhere */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4">
         <StatCard icon={Wallet} label="Portfolio Value" value={summaryStats.portfolioValue} delay={0} />
         <StatCard
@@ -32,8 +32,8 @@ export default function DashboardHome() {
           delay={0.1}
           iconColor="bg-rose-500/10 text-rose-600 dark:text-rose-400"
         />
-        <StatCard icon={Landmark} label="Total Invested" value={summaryStats.totalInvested} delay={0.15} />
-        <StatCard icon={Banknote} label="Available Cash" value={summaryStats.availableCash} delay={0.2} />
+        <StatCard label="Total Invested" value={summaryStats.totalInvested} delay={0.15} />
+        <StatCard label="Available Cash" value={summaryStats.availableCash} delay={0.2} />
         <StatCard
           icon={ShieldAlert}
           label="Risk Score"
@@ -43,7 +43,7 @@ export default function DashboardHome() {
           delay={0.25}
           iconColor="bg-amber-500/10 text-amber-600 dark:text-amber-400"
         />
-        <StatCard icon={PiggyBank} label="Net Worth" value={summaryStats.netWorth} delay={0.3} />
+        <StatCard label="Net Worth" value={summaryStats.netWorth} delay={0.3} />
       </div>
 
       {/* Charts row */}

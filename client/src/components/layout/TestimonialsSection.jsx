@@ -49,7 +49,7 @@ export default function TestimonialsSection() {
               </div>
               <p className="text-slate-700 dark:text-slate-300 mb-6 leading-relaxed">"{t.text}"</p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-400 to-indigo-500 flex items-center justify-center text-white font-bold text-sm">
+                <div className="w-10 h-10 rounded-full bg-primary-600 flex items-center justify-center text-white font-bold text-sm">
                   {t.name.split(" ").map((n) => n[0]).join("")}
                 </div>
                 <div>

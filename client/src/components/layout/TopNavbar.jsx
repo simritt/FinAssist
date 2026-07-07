@@ -141,7 +141,7 @@ export default function TopNavbar({ onMobileMenuClick }) {
               }}
               className="flex items-center gap-2 pl-1 pr-2 py-1 rounded-xl hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
             >
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary-400 to-indigo-500 flex items-center justify-center text-white text-xs font-bold">
+              <div className="w-8 h-8 rounded-full bg-primary-600 flex items-center justify-center text-white text-xs font-bold">
                 {user?.fullName?.[0]?.toUpperCase() || "U"}
               </div>
               <ChevronDown size={14} className="hidden md:block text-slate-400" />
